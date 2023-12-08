@@ -21,7 +21,7 @@ const api = axios.create({
   baseURL: 'http://192.168.0.10:3333'
 }) as APIInstanceProps
 
-let failedQueue: Array<() => PromiseType> = []
+let failedQueue: Array<PromiseType> = []
 let isRefreshing = false
 
 api.registerInterceptTokenManager = signOut => {
